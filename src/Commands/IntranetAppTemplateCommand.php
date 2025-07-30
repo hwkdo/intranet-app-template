@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Hwkdo\IntranetAppTemplate\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class IntranetAppTemplateCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'intranet-app-template';
 
     public $description = 'My command';
 
