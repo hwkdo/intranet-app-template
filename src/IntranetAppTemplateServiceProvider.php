@@ -19,7 +19,16 @@ class IntranetAppTemplateServiceProvider extends PackageServiceProvider
             ->name('intranet-app-template')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_intranet_app_template_table')
-            ->hasCommand(IntranetAppTemplateCommand::class);
+            ->discoversMigrations();
+    }
+
+    public function boot(): void
+    {
+        // Gate::policy(Raum::class, RaumPolicy::class);
+        $this->app->booted( function() {
+            Volt::mount(__DIR__.'/../resources/views/livewire');                        
+        });
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+
     }
 }
