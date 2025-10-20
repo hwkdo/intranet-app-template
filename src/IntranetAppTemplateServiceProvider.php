@@ -24,6 +24,7 @@ class IntranetAppTemplateServiceProvider extends PackageServiceProvider
 
     public function boot(): void
     {
+        parent::boot();
         // Gate::policy(Raum::class, RaumPolicy::class);
         $this->app->booted( function() {
             Volt::mount(__DIR__.'/../resources/views/livewire');                        
