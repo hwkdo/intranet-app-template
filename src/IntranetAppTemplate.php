@@ -29,5 +29,15 @@ class IntranetAppTemplate implements IntranetAppInterface
     public static function roles_user(): Collection
     {
         return collect(config('intranet-app-template.roles.user'));
-    }    
+    }
+    
+    public static function userSettingsClass(): ?string
+    {
+        return null;
+    }
+    
+    public static function appSettingsClass(): ?string
+    {
+        return null;
+    }
 }
