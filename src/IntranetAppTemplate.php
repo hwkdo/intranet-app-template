@@ -33,11 +33,11 @@ class IntranetAppTemplate implements IntranetAppInterface
     
     public static function userSettingsClass(): ?string
     {
-        return null;
+        return \Hwkdo\IntranetAppTemplate\Data\UserSettings::class;
     }
     
     public static function appSettingsClass(): ?string
     {
-        return null;
+        return \Hwkdo\IntranetAppTemplate\Data\AppSettings::class;
     }
 }
