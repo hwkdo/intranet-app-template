@@ -15,11 +15,31 @@
     $navItems = !empty($navItems) ? $navItems : $defaultNavItems;
 @endphp
 
-<x-intranet-app-base::app-layout 
-    app-identifier="template"
-    :heading="$heading"
-    :subheading="$subheading"
-    :nav-items="$navItems"
->
-    {{ $slot }}
-</x-intranet-app-base::app-layout>
+@if(request()->routeIs('apps.template.index'))
+    <x-intranet-app-base::app-layout 
+        app-identifier="template"
+        :heading="$heading"
+        :subheading="$subheading"
+        :nav-items="$navItems"
+        :wrap-in-card="false"
+    >
+        <x-intranet-app-base::app-index-auto 
+            app-identifier="template"
+            app-name="Template App"
+            app-description="Beispiel-App für neue Intranet-Apps"
+            :nav-items="$navItems"
+            welcome-title="Willkommen zur Template App"
+            welcome-description="Dies ist eine Beispiel-App, die als Template für neue Intranet-Apps dient."
+        />
+    </x-intranet-app-base::app-layout>
+@else
+    <x-intranet-app-base::app-layout 
+        app-identifier="template"
+        :heading="$heading"
+        :subheading="$subheading"
+        :nav-items="$navItems"
+        :wrap-in-card="true"
+    >
+        {{ $slot }}
+    </x-intranet-app-base::app-layout>
+@endif

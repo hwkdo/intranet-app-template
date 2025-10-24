@@ -6,6 +6,6 @@ title('Template - Meine Einstellungen');
 
 ?>
 
-<x-intranet-app-template::template-layout heading="Template App" subheading="Meine Einstellungen">
-    <x-intranet-app-base::user-settings app-identifier="template" />
+<x-intranet-app-template::template-layout heading="Meine Einstellungen" subheading="Persönliche Einstellungen für die Template App">
+    @livewire('intranet-app-base::user-settings', ['appIdentifier' => 'template'])
 </x-intranet-app-template::template-layout>

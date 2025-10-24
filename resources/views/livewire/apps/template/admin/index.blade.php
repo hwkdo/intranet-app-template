@@ -17,11 +17,11 @@ state(['activeTab' => 'einstellungen']);
         
         <flux:tab.panel name="einstellungen">
             <div style="min-height: 400px;">
-                <x-intranet-app-base::admin-settings 
-                    app-identifier="template"
-                    settings-model-class="\Hwkdo\IntranetAppTemplate\Models\IntranetAppTemplateSettings"
-                    app-settings-class="\Hwkdo\IntranetAppTemplate\Data\AppSettings"
-                />
+                @livewire('intranet-app-base::admin-settings', [
+                    'appIdentifier' => 'template',
+                    'settingsModelClass' => '\Hwkdo\IntranetAppTemplate\Models\IntranetAppTemplateSettings',
+                    'appSettingsClass' => '\Hwkdo\IntranetAppTemplate\Data\AppSettings'
+                ])
             </div>
         </flux:tab.panel>
 
