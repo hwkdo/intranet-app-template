@@ -5,6 +5,7 @@ namespace Hwkdo\IntranetAppTemplate;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Hwkdo\IntranetAppTemplate\Commands\IntranetAppTemplateCommand;
+use Livewire\Volt\Volt;
 
 class IntranetAppTemplateServiceProvider extends PackageServiceProvider
 {
