@@ -40,4 +40,9 @@ class IntranetAppTemplate implements IntranetAppInterface
     {
         return \Hwkdo\IntranetAppTemplate\Data\AppSettings::class;
     }
+
+    public static function mcpServers(): array
+    {
+        return [];
+    }
 }
