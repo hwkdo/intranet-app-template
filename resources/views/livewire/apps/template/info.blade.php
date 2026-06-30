@@ -6,6 +6,8 @@ title('Template - App-Info');
 
 ?>
 
+<div>
 <x-intranet-app-template::template-layout heading="App-Info" subheading="Installierte Version und Release-Historie">
     @livewire('intranet-app-base::app-info', ['appIdentifier' => 'template'])
 </x-intranet-app-template::template-layout>
+</div>

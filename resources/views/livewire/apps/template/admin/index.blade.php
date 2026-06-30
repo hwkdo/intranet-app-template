@@ -8,6 +8,7 @@ state(['activeTab' => 'hintergrundbild']);
 
 ?>
 
+<div>
 <x-intranet-app-template::template-layout heading="Template App" subheading="Admin">
     <flux:tab.group>
         <flux:tabs wire:model="activeTab">
@@ -63,3 +64,4 @@ state(['activeTab' => 'hintergrundbild']);
         </flux:tab.panel>
     </flux:tab.group>
 </x-intranet-app-template::template-layout>
+</div>
