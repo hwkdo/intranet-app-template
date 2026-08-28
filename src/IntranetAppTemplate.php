@@ -2,9 +2,10 @@
 
 namespace Hwkdo\IntranetAppTemplate;
 use Hwkdo\IntranetAppBase\Interfaces\IntranetAppInterface;
+use Hwkdo\IntranetAppBase\Interfaces\ProvidesManualsInterface;
 use Illuminate\Support\Collection;
 
-class IntranetAppTemplate implements IntranetAppInterface 
+class IntranetAppTemplate implements IntranetAppInterface, ProvidesManualsInterface
 {
     public static function app_name(): string
     {
@@ -42,6 +43,14 @@ class IntranetAppTemplate implements IntranetAppInterface
     }
 
     public static function mcpServers(): array
+    {
+        return [];
+    }
+
+    /**
+     * @return list<\Hwkdo\IntranetAppBase\Data\ManualDefinition>
+     */
+    public static function manuals(): array
     {
         return [];
     }

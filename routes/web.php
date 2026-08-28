@@ -8,6 +8,7 @@ Route::middleware(['web','auth','can:see-app-template'])->group(function () {
     Volt::route('apps/template/example', 'apps.template.example')->name('apps.template.example');
     Volt::route('apps/template/settings/user', 'apps.template.settings.user')->name('apps.template.settings.user');
     Volt::route('apps/template/info', 'apps.template.info')->name('apps.template.info');
+    Volt::route('apps/template/manual', 'apps.template.manual')->name('apps.template.manual');
 });
 
 Route::middleware(['web','auth','can:manage-app-template'])->group(function () {
